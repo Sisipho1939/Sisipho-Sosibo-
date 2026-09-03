@@ -1,18 +1,27 @@
-# Sisipho-Sosibo-
-First data engineering project
-📍 Johannesburg South Africa| Aspiring data engineering 
-## about me 
-I am learning data engineering to work remotely for international companies currently mastering SQL, Python,and ETL pipelines 
-## Project 1 Weather data pipeline 
-Goal: collect weather Data and build a data pipeline 
-Tools: Python, SQL, GitHub 
-Status: in progress (Day 1)
-## Skills growing 
-SQL (Learning)
-Python (Learning)
-Git & GitHub ( Day1 done!)
-ETL/ Data pipeline 
-## Contact 
-GitHub: Sisipho1939
-Location: Pretoria, South Africa 
-Open to remote Junior data roles
+# 🌦️ Johannesburg Weather Data Pipeline
+By Sisipho Sosibo | Aspiring Data Engineer | Johannesburg, SA
+
+## What this project does
+This pipeline collects real-time weather data for Johannesburg using Python and a free weather API. It's my first step towards becoming a remote Data Engineer.
+
+## Tools Used
+- Python
+- Open-Meteo API (Free, no key needed)
+- GitHub
+
+## How it works
+1. Fetches weather for Johannesburg (-26.2, 28.04)
+2. Extracts temperature & wind speed
+3. Prints results with timestamp
+
+## My Goals
+- Learn SQL & Python for Data Engineering
+- Build 3 portfolio projects
+- Get a remote Junior Data Engineer job (UK/Canada)
+
+## Next Steps
+- Add data storage (CSV/SQL)
+- Schedule daily runs
+- Build dashboard
+
+📍 Available for remote opportunities
