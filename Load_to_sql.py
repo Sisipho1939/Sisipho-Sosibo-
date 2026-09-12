@@ -20,8 +20,22 @@ result = conn.execute("""
   LIMIT 5
 """).fetchall()
 
+# Load your clean data
+df = pd.read_csv('clean_weather_data.csv')
 
+# Create database
+conn = sqlite3.connect('johannesburg_weather.db')
+df.to_sql('weather', conn, if_exists='replace', index=False)
 
-Ngisanda kwakha i-database yesimo sezulu sase JHB!
-Next: Ngifaka i-Airflow + Docker (Week 2)
-  pri
+print("✅ Loaded to SQL!")
+
+# Prove it with SQL - This is interview question!
+result = conn.execute("""
+  SELECT date, temp_celsius 
+  FROM weather 
+  WHERE temp_celsius > 20 
+  ORDER BY temp_celsius DESC 
+  LIMIT 5
+""").fetchall()
+
+print(result)
