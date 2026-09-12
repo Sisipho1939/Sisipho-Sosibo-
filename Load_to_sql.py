@@ -20,6 +20,8 @@ result = conn.execute("""
   LIMIT 5
 """).fetchall()
 
-print("\nTop 5 hottest days in JHB:")
-for row in result:
-  print(row)
+
+
+Ngisanda kwakha i-database yesimo sezulu sase JHB!
+Next: Ngifaka i-Airflow + Docker (Week 2)
+  pri
