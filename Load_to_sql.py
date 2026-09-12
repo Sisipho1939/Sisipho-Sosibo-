@@ -11,7 +11,7 @@ df.to_sql('weather', conn, if_exists='replace', index=False)
 
 print("✅ Loaded to SQL!")
 
-# Prove it with SQL - This is interview question!
+# Prove it with SQL
 result = conn.execute("""
   SELECT date, temp_celsius 
   FROM weather 
@@ -19,5 +19,3 @@ result = conn.execute("""
   ORDER BY temp_celsius DESC 
   LIMIT 5
 """).fetchall()
-
-#
