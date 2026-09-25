@@ -1,4 +1,4 @@
--- Betty Salon Database - Day 1-3
+ -- Betty Salon Database - Day 1-3
 DROP TABLE IF EXISTS salon;
 CREATE TABLE salon (id INT, name TEXT, amount INT);
 INSERT INTO salon VALUES (1, 'Thandi', 800);
@@ -37,3 +37,24 @@ ORDER BY total_spent DESC;
 Betty  | 1 | 1700
 Thandi | 2 | 950
 Noma   | 1 | 350
+-- Day 23: WEEK 4 UPGRADE - JOIN & Business Intelligence (Day 23)
+
+-- JOIN: Which client got which service?
+SELECT c.name, s.service_type, s.price
+FROM clients c
+JOIN services s ON c.id = s.client_id;
+
+-- BUSINESS REPORT: Total revenue per client (Boss question!)
+SELECT c.name, SUM(s.price) as total_spent
+FROM clients c
+JOIN services s ON c.id = s.client_id
+GROUP BY c.name
+ORDER BY total_spent DESC;
+
+-- FINAL: Most profitable client?
+SELECT c.name, SUM(s.price) as total_spent
+FROM clients c
+JOIN services s ON c.id = s.client_id
+GROUP BY c.name
+ORDER BY total_spent DESC
+LIMIT 1;
