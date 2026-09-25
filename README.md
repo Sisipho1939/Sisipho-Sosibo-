@@ -1,26 +1,20 @@
-# 🌦️ JHB Weather Database Project
+# 🌦️ Johannesburg Live Weather Pipeline
 
-**Umsebenzi wami:** API → CSV → Ukuhlanza → SQL  
-**Ama-Skills:** Python, Pandas, SQLite  
-**Next:** Ngifaka i-Airflow + Docker
+> Built entirely on my phone 📱 | South Africa 🇿🇦
 
----
+### 🔍 What This Project Does
+This is a real-time ETL (Extract, Transform, Load) pipeline that:
+1. **EXTRACTS** live hourly weather for Johannesburg from Open-Meteo API
+2. **LOADS** data into a modern Data Lake (Parquet + SQLite)
+3. **QUERIES** with SQL to find the hottest hour of the day
 
-### 💇‍♀️ Betty Salon Database (Week 1)
+### 🛠️ Tech Stack
+- Python, Pandas, Requests
+- SQL (SQLite)
+- Parquet (Data Lake format)
+- Open-Meteo API
 
-My first SQL database - 5 Day Challenge
-
-- Day 1: CREATE & INSERT ✅
-- Day 2: WHERE, UPDATE, DELETE ✅  
-- Day 3: COUNT, SUM, AVG ✅
-- Day 4: JOIN
-- Day 5: Full Schema
-
-**Files:**
-- `Salon.sql` - Betty salon data
-- `weather_pipeline.py` - JHB weather API
-- `transform.py` - Ukuhlanza data
-- `Load_to_sql.py` - Load to SQL
-- `dags/` - Airflow DAGs
-
-**Total Revenue:** R2850
+### 📊 Sample Result
+```sql
+SELECT time, temperature_2m FROM weather ORDER BY temperature_2m DESC LIMIT 1
+-- Result: 2026-05-13 14:00 | 28.5°C 🔥
